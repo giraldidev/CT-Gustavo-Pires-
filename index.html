@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo Pires CT | Emagrecimento e Saúde em Mineiros do Tietê</title>
+    <meta name="description"
+        content="Transforme sua saúde e corpo com o Personal Trainer Gustavo Pires. Treinos personalizados e em grupo em Mineiros do Tietê.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFB800',
+                        secondary: '#0F0F0F',
+                        accent: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- AOS Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-secondary text-gray-100 font-sans selection:bg-primary selection:text-secondary">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-4" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="img/logo.jpeg" alt="Logo CT Gustavo Pires" class="h-12 w-auto rounded-lg">
+                    <span class="font-heading font-black text-xl tracking-tighter hidden sm:block uppercase">
+                        GUSTAVO <span class="text-primary text-2xl">PIRES</span>
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#inicio" class="hover:text-primary transition-colors font-medium">Início</a>
+                        <a href="#sobre" class="hover:text-primary transition-colors font-medium">Sobre</a>
+                        <a href="#diferencial" class="hover:text-primary transition-colors font-medium">Diferencial</a>
+                        <a href="#metodologia" class="hover:text-primary transition-colors font-medium">Metodologia</a>
+                        <a href="https://wa.me/5514997594297" target="_blank"
+                            class="bg-primary text-secondary px-6 py-2 rounded-full font-bold hover:scale-105 transition-all shadow-gold">Começar
+                            Agora</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden glass border-t border-white/10 px-4 py-6 space-y-4 mx-4 rounded-2xl mt-2">
+            <a href="#inicio" class="block text-lg font-medium p-2 hover:bg-white/5 rounded-xl">Início</a>
+            <a href="#sobre" class="block text-lg font-medium p-2 hover:bg-white/5 rounded-xl">Sobre</a>
+            <a href="#diferencial" class="block text-lg font-medium p-2 hover:bg-white/5 rounded-xl">Diferencial</a>
+            <a href="#metodologia" class="block text-lg font-medium p-2 hover:bg-white/5 rounded-xl">Metodologia</a>
+            <a href="https://wa.me/5514997594297" target="_blank"
+                class="block bg-primary text-secondary text-center py-3 rounded-xl font-bold">Começar Agora</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center pt-20 overflow-hidden hero-pattern">
+        <!-- Abstract Shapes -->
+        <div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-1/4 -left-20 w-80 h-80 bg-primary/5 rounded-full blur-[100px]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <span
+                        class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-sm mb-6 border border-primary/20 tracking-wider uppercase">
+                        CT Gustavo Pires • Mineiros do Tietê
+                    </span>
+                    <h1
+                        class="text-4xl sm:text-5xl md:text-7xl font-heading font-black leading-tight mb-4 sm:mb-6 uppercase">
+                        Transforme seu <span class="text-gradient">Corpo</span>, Domine sua <span
+                            class="text-gradient">Saúde</span>.
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-400 mb-8 sm:mb-10 max-w-xl leading-relaxed">
+                        Emagrecimento sustentável e alta performance com a metodologia exclusiva do Personal Trainer
+                        Gustavo Pires. Resultados reais em Mineiros do Tietê.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/5514997594297" target="_blank"
+                            class="bg-primary text-secondary px-8 py-4 rounded-2xl font-black text-lg flex items-center justify-center gap-3 hover:scale-105 transition-all shadow-gold group">
+                            AGENDAR AULA EXPERIMENTAL
+                            <i data-lucide="arrow-right" class="group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#sobre"
+                            class="px-8 py-4 rounded-2xl border border-white/10 hover:bg-white/5 transition-all flex items-center justify-center gap-3 font-bold">
+                            Conhecer Gustavo
+                        </a>
+                    </div>
+
+                    <div class="mt-12 flex items-center gap-6 text-sm text-gray-400">
+                        <div class="flex -space-x-3">
+                            <img src="https://i.pravatar.cc/100?u=1"
+                                class="w-10 h-10 rounded-full border-2 border-secondary shadow-lg">
+                            <img src="https://i.pravatar.cc/100?u=2"
+                                class="w-10 h-10 rounded-full border-2 border-secondary shadow-lg">
+                            <img src="https://i.pravatar.cc/100?u=3"
+                                class="w-10 h-10 rounded-full border-2 border-secondary shadow-lg">
+                        </div>
+                        <p><span class="text-white font-bold">+500 vidas</span> transformadas em nossa região</p>
+                    </div>
+                </div>
+
+                <div class="relative" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="absolute inset-0 bg-primary/20 rounded-[2rem] blur-[80px] -z-10 animate-pulse"></div>
+                    <div class="relative rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
+                        <img src="img/GustavoPires.jpeg" alt="Gustavo Pires Personal Trainer"
+                            class="w-full h-auto object-cover aspect-[4/5] scale-105">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-secondary via-secondary/80 to-transparent">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-primary/20 p-3 rounded-xl border border-primary/30 backdrop-blur-md">
+                                    <i data-lucide="trophy" class="text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-primary font-bold uppercase tracking-widest">Especialista em
+                                    </p>
+                                    <p class="text-xl font-black italic uppercase">Emagrecimento & Performance</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section id="sobre" class="py-24 bg-accent relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1" data-aos="fade-up">
+                    <h2 class="text-4xl font-heading font-black mb-8 uppercase leading-tight">
+                        Experiência e <span class="text-primary italic">Autoridade</span> no Fitness
+                    </h2>
+                    <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+                        <p>
+                            Gustavo Pires é especialista em resultados reais. Com anos de dedicação ao CT que leva seu
+                            nome em Mineiros do Tietê, ele desenvolveu um método que une ciência e prática para
+                            transformar vidas.
+                        </p>
+                        <p>
+                            Seu foco principal é proporcionar um emagrecimento saudável e sustentável, focando não
+                            apenas na estética, mas na longevidade e bem-estar de cada aluno que entra em seu CT.
+                        </p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                            <li class="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
+                                <i data-lucide="award" class="w-6 h-6 text-primary"></i>
+                                <span class="font-bold text-sm">Graduado em Ed. Física</span>
+                            </li>
+                            <li class="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
+                                <i data-lucide="target" class="w-6 h-6 text-primary"></i>
+                                <span class="font-bold text-sm">Foco em Resultados</span>
+                            </li>
+                            <li class="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
+                                <i data-lucide="zap" class="w-6 h-6 text-primary"></i>
+                                <span class="font-bold text-sm">Alta Performance</span>
+                            </li>
+                            <li class="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
+                                <i data-lucide="heart" class="w-6 h-6 text-primary"></i>
+                                <span class="font-bold text-sm">Saúde Sustentável</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 grid grid-cols-2 gap-4" data-aos="fade-left">
+                    <div class="space-y-4 pt-12">
+                        <div class="glass p-6 sm:p-8 rounded-3xl text-center border-primary/20">
+                            <p class="text-4xl sm:text-5xl font-black text-primary mb-2">10+</p>
+                            <p class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-gray-400">Anos de
+                                Carreira</p>
+                        </div>
+                        <div class="glass p-6 sm:p-8 rounded-3xl text-center border-primary/20">
+                            <p class="text-4xl sm:text-5xl font-black text-primary mb-2">500+</p>
+                            <p class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-gray-400">Alunos
+                                Atendidos</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="glass p-6 sm:p-8 rounded-3xl text-center border-primary/20">
+                            <div class="flex justify-center mb-2">
+                                <i data-lucide="star" class="text-primary fill-primary w-3 h-3 sm:w-5 sm:h-5"></i>
+                                <i data-lucide="star" class="text-primary fill-primary w-3 h-3 sm:w-5 sm:h-5"></i>
+                                <i data-lucide="star" class="text-primary fill-primary w-3 h-3 sm:w-5 sm:h-5"></i>
+                                <i data-lucide="star" class="text-primary fill-primary w-3 h-3 sm:w-5 sm:h-5"></i>
+                                <i data-lucide="star" class="text-primary fill-primary w-3 h-3 sm:w-5 sm:h-5"></i>
+                            </div>
+                            <p class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-gray-400">
+                                Excelência em Atendimento</p>
+                        </div>
+                        <div class="rounded-3xl overflow-hidden h-72 border border-white/10 relative group">
+                            <img src="img/logo-atual.jpeg"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differential (Group Training) -->
+    <section id="diferencial" class="py-24 bg-secondary relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-primary font-black tracking-widest text-sm uppercase mb-4 block">Exclusividade e
+                    Comunidade</span>
+                <h2 class="text-4xl md:text-5xl font-heading font-black mb-6 uppercase">O Poder do <span
+                        class="text-primary italic">Treino em Grupo</span></h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">Experiência premium de personal trainer com o
+                    dinamismo e motivação do grupo.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-10 rounded-[3rem] hover:border-primary/50 transition-all duration-500 group relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-all">
+                    </div>
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-all relative z-10">
+                        <i data-lucide="users-2" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 uppercase tracking-tight">Personal em Grupo</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Acompanhamento técnico individualizado dentro de um ambiente coletivo. Mais motivação por um
+                        investimento acessível.
+                    </p>
+                </div>
+
+                <div class="glass p-10 rounded-[3rem] hover:border-primary/50 transition-all duration-500 group relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-all">
+                    </div>
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-all relative z-10">
+                        <i data-lucide="calendar-check" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 uppercase tracking-tight">Horários Flexíveis</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Sistema de agendamento que respeita sua rotina. Escolha seus dias e horários conforme sua
+                        disponibilidade semanal.
+                    </p>
+                </div>
+
+                <div class="glass p-10 rounded-[3rem] hover:border-primary/50 transition-all duration-500 group relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-all">
+                    </div>
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-all relative z-10">
+                        <i data-lucide="flame" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 uppercase tracking-tight">Ambiente de Elite</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Treine cercado por pessoas que buscam o mesmo objetivo. A energia do CT Gustavo Pires é o
+                        combustível para seu resultado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CT Infrastructure -->
+    <section class="py-24 bg-accent overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div
+                                class="rounded-[2.5rem] overflow-hidden aspect-square border border-white/10 shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop"
+                                    class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                            </div>
+                            <div
+                                class="rounded-[2.5rem] overflow-hidden aspect-[3/4] border border-white/10 shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=800&auto=format&fit=crop"
+                                    class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                            </div>
+                        </div>
+                        <div class="space-y-4 sm:-mt-12">
+                            <div
+                                class="rounded-[2.5rem] overflow-hidden aspect-[3/4] border border-white/10 shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop"
+                                    class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                            </div>
+                            <div
+                                class="rounded-[2.5rem] overflow-hidden aspect-square border border-white/10 shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=800&auto=format&fit=crop"
+                                    class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h2 class="text-4xl font-heading font-black mb-8 uppercase leading-tight">
+                        Estrutura <span class="text-primary">Moderna</span> e Completa
+                    </h2>
+                    <p class="text-xl text-gray-400 mb-10 leading-relaxed">
+                        Nosso Centro de Treinamento em Mineiros do Tietê foi projetado para quem não aceita menos que o
+                        melhor. Equipamentos de ponta e ambiente focado.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-8">
+                        <div class="group">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div
+                                    class="p-3 bg-primary/10 rounded-xl group-hover:bg-primary group-hover:text-secondary transition-all duration-300">
+                                    <i data-lucide="dumbbell" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-bold uppercase tracking-tight">Equipamentos Pro</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 leading-relaxed">Biomecânica de alto nível para resultados
+                                seguros e rápidos.</p>
+                        </div>
+                        <div class="group">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div
+                                    class="p-3 bg-primary/10 rounded-xl group-hover:bg-primary group-hover:text-secondary transition-all duration-300">
+                                    <i data-lucide="shield" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-bold uppercase tracking-tight">Ambiente Seguro</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 leading-relaxed">Protocolos rígidos de higiene e organização
+                                em todo o CT.</p>
+                        </div>
+                        <div class="group">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div
+                                    class="p-3 bg-primary/10 rounded-xl group-hover:bg-primary group-hover:text-secondary transition-all duration-300">
+                                    <i data-lucide="music-2" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-bold uppercase tracking-tight">Vibe de Treino</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 leading-relaxed">Som e iluminação preparados para elevar sua
+                                adrenalina.</p>
+                        </div>
+                        <div class="group">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div
+                                    class="p-3 bg-primary/10 rounded-xl group-hover:bg-primary group-hover:text-secondary transition-all duration-300">
+                                    <i data-lucide="map" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-bold uppercase tracking-tight">Localização Central</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 leading-relaxed">Fácil acesso no coração de Mineiros do
+                                Tietê.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology -->
+    <section id="metodologia" class="py-24 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="glass p-6 sm:p-10 md:p-20 rounded-[3rem] sm:rounded-[4rem] relative overflow-hidden border-white/5">
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
+                <div class="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span class="text-primary font-black tracking-widest text-sm uppercase mb-4 block">Nossa
+                            Metodologia</span>
+                        <h2 class="text-4xl font-heading font-black mb-8 uppercase">Foco em <span
+                                class="text-primary italic">Saúde Sustentável</span></h2>
+                        <div class="space-y-6">
+                            <div class="flex gap-6 group">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center font-black text-primary group-hover:bg-primary group-hover:text-secondary transition-all">
+                                    01</div>
+                                <div>
+                                    <h4 class="font-bold mb-2 uppercase text-sm tracking-widest">Avaliação Individual
+                                    </h4>
+                                    <p class="text-gray-400 text-sm leading-relaxed">Entendemos suas necessidades e
+                                        limitações antes do primeiro peso ser levantado.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 group">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center font-black text-primary group-hover:bg-primary group-hover:text-secondary transition-all">
+                                    02</div>
+                                <div>
+                                    <h4 class="font-bold mb-2 uppercase text-sm tracking-widest">Periodização
+                                        Inteligente</h4>
+                                    <p class="text-gray-400 text-sm leading-relaxed">Treinos que evoluem com você,
+                                        evitando o platô e garantindo motivação constante.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 group">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center font-black text-primary group-hover:bg-primary group-hover:text-secondary transition-all">
+                                    03</div>
+                                <div>
+                                    <h4 class="font-bold mb-2 uppercase text-sm tracking-widest">Acompanhamento Contínuo
+                                    </h4>
+                                    <p class="text-gray-400 text-sm leading-relaxed">Correção técnica em tempo real para
+                                        máxima eficiência e zero lesões.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex justify-center lg:justify-end">
+                        <div
+                            class="bg-primary/5 border border-primary/20 p-12 rounded-[3rem] text-center backdrop-blur-xl relative overflow-hidden group">
+                            <div
+                                class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div class="relative z-10">
+                                <i data-lucide="heart-pulse" class="w-16 h-16 text-primary mx-auto mb-6"></i>
+                                <h4 class="text-2xl font-black mb-4 uppercase">Emagrecimento com Saúde</h4>
+                                <p class="text-gray-400 text-sm max-w-xs mx-auto leading-relaxed">
+                                    Não focamos apenas na balança. Nosso objetivo é mudar sua composição corporal e sua
+                                    relação com o exercício.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="py-24 bg-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-heading font-black mb-4 uppercase">Localização</h2>
+                <p class="text-xl text-gray-400 flex items-center justify-center gap-3">
+                    <i data-lucide="map-pin" class="text-primary"></i> Mineiros do Tietê - SP
+                </p>
+            </div>
+            <div class="rounded-[3rem] overflow-hidden h-[500px] border border-white/10 glass shadow-2xl relative">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3688.2947124393254!2d-48.45059452382031!3d-22.417930720584724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c7430020c9efcf%3A0xabce144f5e19078c!2sCT%20Gustavo%20Pires!5e0!3m2!1spt-BR!2sbr!4v1778808080439!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div
+                    class="absolute bottom-4 left-4 right-4 md:bottom-8 md:right-8 md:left-auto md:w-96 glass p-6 sm:p-8 rounded-[2rem] border border-primary/30 backdrop-blur-2xl">
+                    <h4 class="font-black mb-4 flex items-center gap-3 text-primary uppercase text-lg italic">
+                        <i data-lucide="navigation"></i> Visite o CT
+                    </h4>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Encontre o melhor CT de Mineiros do Tietê e comece sua transformação hoje mesmo.
+                    </p>
+                    <a href="https://maps.app.goo.gl/7zzJteJsx1AAXyyUA" target="_blank"
+                        class="block text-center bg-primary text-secondary py-4 rounded-2xl font-black uppercase text-sm hover:scale-105 transition-all shadow-gold">Como
+                        Chegar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="bg-secondary pt-24 pb-12 border-t border-white/5 relative overflow-hidden">
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-[120px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-2">
+                    <img src="img/logo.jpeg" alt="Logo CT Gustavo Pires" class="h-20 w-auto mb-10 rounded-xl">
+                    <h3 class="text-4xl font-heading font-black mb-8 uppercase leading-tight italic">
+                        Seu Resultado <br><span class="text-primary italic">é Minha Missão</span>.
+                    </h3>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/ct.gustavopires_/" target="_blank"
+                            class="w-14 h-14 glass rounded-2xl flex items-center justify-center hover:bg-primary hover:text-secondary transition-all duration-300 border-primary/20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-6 h-6">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/5514997594297" target="_blank"
+                            class="w-14 h-14 glass rounded-2xl flex items-center justify-center hover:bg-primary hover:text-secondary transition-all duration-300 border-primary/20">
+                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-black text-white mb-8 uppercase tracking-widest text-xs italic">Navegação</h4>
+                    <ul class="space-y-4 text-gray-400 font-medium">
+                        <li><a href="#inicio" class="hover:text-primary transition-colors">Início</a></li>
+                        <li><a href="#sobre" class="hover:text-primary transition-colors">Sobre Gustavo</a></li>
+                        <li><a href="#diferencial" class="hover:text-primary transition-colors">Diferenciais</a></li>
+                        <li><a href="#metodologia" class="hover:text-primary transition-colors">Metodologia</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-black text-white mb-8 uppercase tracking-widest text-xs italic">Contato & Horários
+                    </h4>
+                    <ul class="space-y-4 text-gray-400 font-medium">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="text-primary w-5 h-5"></i>
+                            (14) 99759-4297
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="clock" class="text-primary w-5 h-5"></i>
+                            Segunda a Sexta<br>06:00 - 21:00
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i data-lucide="calendar" class="text-primary w-5 h-5"></i>
+                            Sábado<br>08:00 - 12:00
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-gray-500 font-bold uppercase tracking-widest">
+                <p>&copy; 2024 CT GUSTAVO PIRES. Desenvolvido para Performance.</p>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-white transition-colors">Privacidade</a>
+                    <a href="#" class="hover:text-white transition-colors">Termos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5514997594297" target="_blank" class="fixed bottom-8 right-8 z-50 group">
+        <div
+            class="absolute inset-0 bg-[#25D366] rounded-full blur-[20px] opacity-40 group-hover:opacity-60 transition-opacity">
+        </div>
+        <div
+            class="relative bg-[#25D366] text-white p-4 sm:p-5 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300">
+            <i data-lucide="message-circle" class="w-6 h-6 sm:w-8 sm:h-8 fill-white/20"></i>
+            <span
+                class="max-w-0 overflow-hidden group-hover:max-w-[200px] transition-all duration-500 whitespace-nowrap px-0 group-hover:px-4 font-black uppercase text-[10px] sm:text-xs">Falar
+                com Gustavo</span>
+        </div>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

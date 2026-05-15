@@ -1,0 +1,47 @@
+.glass {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #FFB800 0%, #FFD700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+    background: linear-gradient(135deg, #FFB800 0%, #E6A600 100%);
+}
+
+.shadow-gold {
+    box-shadow: 0 10px 30px -10px rgba(255, 184, 0, 0.3);
+}
+
+.hero-pattern {
+    background-image: radial-gradient(circle at 2px 2px, rgba(255,184,0,0.05) 1px, transparent 0);
+    background-size: 40px 40px;
+}
+
+#navbar.shadow-2xl {
+    background: rgba(15, 15, 15, 0.95);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0F0F0F;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FFB800;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #E6A600;
+}
