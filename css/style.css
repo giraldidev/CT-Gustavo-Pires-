@@ -28,6 +28,23 @@
     background: rgba(15, 15, 15, 0.95);
 }
 
+/* Fotos com efeito P&B -> cor.
+   Em telas touch (mobile/tablet) nao existe hover, entao o P&B ficaria
+   permanente. Por isso o filtro so e aplicado em dispositivos com mouse. */
+.photo-bw {
+    transition: filter 0.7s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .photo-bw {
+        filter: grayscale(100%);
+    }
+
+    .photo-bw:hover {
+        filter: grayscale(0%);
+    }
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
