@@ -28,20 +28,37 @@
     background: rgba(15, 15, 15, 0.95);
 }
 
-/* Fotos com efeito P&B -> cor.
-   Em telas touch (mobile/tablet) nao existe hover, entao o P&B ficaria
-   permanente. Por isso o filtro so e aplicado em dispositivos com mouse. */
-.photo-bw {
-    transition: filter 0.7s ease;
+/* Failsafe do AOS.
+   O CSS do AOS deixa os elementos com opacity: 0 ate a biblioteca marca-los
+   como animados. Se o CDN falhar ou o JS estiver desativado, a pagina inteira
+   ficaria invisivel. Estas regras devolvem o conteudo nesses cenarios. */
+.no-aos [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+/* Fotos reais do CT.
+   Mantidas coloridas: a identidade visual do espaco esta na iluminacao
+   azul/amarela, que o preto e branco anulava. O zoom suave no hover da
+   interatividade no desktop sem prejudicar o toque no mobile. */
+.photo {
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .photo-bw {
-        filter: grayscale(100%);
+    .photo:hover {
+        transform: scale(1.06);
     }
+}
 
-    .photo-bw:hover {
-        filter: grayscale(0%);
+@media (prefers-reduced-motion: reduce) {
+
+    .photo,
+    .photo:hover {
+        transition: none;
+        transform: none;
     }
 }
 

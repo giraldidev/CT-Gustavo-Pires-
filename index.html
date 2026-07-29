@@ -4,9 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gustavo Pires</title>
+    <title>CT Gustavo Pires | Personal Trainer em Mineiros do Tietê</title>
     <meta name="description"
         content="Transforme sua saúde e corpo com o Personal Trainer Gustavo Pires. Treinos personalizados e em grupo em Mineiros do Tietê.">
+    <meta name="theme-color" content="#0F0F0F">
+    <link rel="icon" href="img/logonovo.jpeg">
+
+    <!-- Open Graph (link compartilhado no WhatsApp/Instagram) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="CT Gustavo Pires | Personal Trainer em Mineiros do Tietê">
+    <meta property="og:description"
+        content="Emagrecimento sustentável e alta performance com a metodologia exclusiva do Personal Trainer Gustavo Pires.">
+    <meta property="og:image" content="img/estrutura-treino.jpg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -43,6 +53,16 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Sem JavaScript o CSS do AOS manteria todo o conteúdo invisível -->
+    <noscript>
+        <style>
+            [data-aos] {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        </style>
+    </noscript>
 </head>
 
 <body class="bg-secondary text-gray-100 font-sans selection:bg-primary selection:text-secondary">
@@ -52,7 +72,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <img src="img/logonovo.jpeg" alt="Logo CT Gustavo Pires" class="h-12 w-auto rounded-lg">
+                    <img src="img/logonovo.jpeg" width="1254" height="1254" alt="Logo CT Gustavo Pires"
+                        class="h-12 w-auto rounded-lg">
                     <span class="font-heading font-black text-2xl tracking-tighter uppercase">
                         <span class="text-primary">GUSTAVO PIRES</span>
                     </span>
@@ -63,13 +84,16 @@
                         <a href="#sobre" class="hover:text-primary transition-colors font-medium">Sobre</a>
                         <a href="#diferencial" class="hover:text-primary transition-colors font-medium">Diferencial</a>
                         <a href="#metodologia" class="hover:text-primary transition-colors font-medium">Metodologia</a>
-                        <a href="https://wa.me/5514997594297" target="_blank"
+                        <a href="https://wa.me/5514997594297" target="_blank" rel="noopener"
                             class="bg-primary text-secondary px-6 py-2 rounded-full font-bold hover:scale-105 transition-all shadow-gold">Começar
                             Agora</a>
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white">
+                    <!-- w-12/h-12 fixos: a área de toque não pode depender do ícone do CDN carregar -->
+                    <button id="mobile-menu-button" type="button" aria-label="Abrir menu" aria-controls="mobile-menu"
+                        aria-expanded="false"
+                        class="w-12 h-12 -mr-2 flex items-center justify-center text-gray-300 hover:text-white">
                         <i data-lucide="menu" class="w-8 h-8"></i>
                     </button>
                 </div>
@@ -82,7 +106,7 @@
             <a href="#sobre" class="block text-lg font-medium p-2 hover:bg-white/5 rounded-xl">Sobre</a>
             <a href="#diferencial" class="block text-lg font-medium p-2 hover:bg-white/5 rounded-xl">Diferencial</a>
             <a href="#metodologia" class="block text-lg font-medium p-2 hover:bg-white/5 rounded-xl">Metodologia</a>
-            <a href="https://wa.me/5514997594297" target="_blank"
+            <a href="https://wa.me/5514997594297" target="_blank" rel="noopener"
                 class="block bg-primary text-secondary text-center py-3 rounded-xl font-bold">Começar Agora</a>
         </div>
     </nav>
@@ -110,7 +134,7 @@
                         Gustavo Pires. Resultados reais em Mineiros do Tietê.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://wa.me/5514997594297" target="_blank"
+                        <a href="https://wa.me/5514997594297" target="_blank" rel="noopener"
                             class="bg-primary text-secondary px-8 py-4 rounded-2xl font-black text-lg flex items-center justify-center gap-3 hover:scale-105 transition-all shadow-gold group">
                             AGENDAR AULA EXPERIMENTAL
                             <i data-lucide="arrow-right" class="group-hover:translate-x-1 transition-transform"></i>
@@ -121,14 +145,10 @@
                         </a>
                     </div>
 
-                    <div class="mt-12 flex items-center gap-6 text-sm text-gray-400">
-                        <div class="flex -space-x-3">
-                            <img src="https://i.pravatar.cc/100?u=1"
-                                class="w-10 h-10 rounded-full border-2 border-secondary shadow-lg">
-                            <img src="https://i.pravatar.cc/100?u=2"
-                                class="w-10 h-10 rounded-full border-2 border-secondary shadow-lg">
-                            <img src="https://i.pravatar.cc/100?u=3"
-                                class="w-10 h-10 rounded-full border-2 border-secondary shadow-lg">
+                    <div class="mt-12 flex items-center gap-4 text-sm text-gray-400">
+                        <div
+                            class="flex-shrink-0 w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+                            <i data-lucide="users" class="w-6 h-6 text-primary"></i>
                         </div>
                         <p><span class="text-white font-bold">+500 vidas</span> transformadas em nossa região</p>
                     </div>
@@ -137,7 +157,8 @@
                 <div class="relative" data-aos="fade-left" data-aos-duration="1000">
                     <div class="absolute inset-0 bg-primary/20 rounded-[2rem] blur-[80px] -z-10 animate-pulse"></div>
                     <div class="relative rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
-                        <img src="img/GustavoPires.jpeg" alt="Gustavo Pires Personal Trainer"
+                        <img src="img/GustavoPires.jpeg" width="789" height="788" fetchpriority="high"
+                            decoding="async" alt="Gustavo Pires, personal trainer em Mineiros do Tietê"
                             class="w-full h-auto object-cover aspect-[4/5] scale-105">
                         <div
                             class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-secondary via-secondary/80 to-transparent">
@@ -221,10 +242,10 @@
                             <p class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-gray-400">
                                 Excelência em Atendimento</p>
                         </div>
-                        <div class="rounded-3xl overflow-hidden h-72 border border-white/10 relative group">
-                            <img src="img/logonovo.jpeg"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent"></div>
+                        <!-- object-contain: é a logo, não uma foto. object-cover cortava o topo e a base dela. -->
+                        <div class="rounded-3xl overflow-hidden h-72 border border-white/10 relative bg-secondary/60">
+                            <img src="img/logonovo.jpeg" width="1254" height="1254" loading="lazy" decoding="async"
+                                alt="Logo do CT Gustavo Pires" class="w-full h-full object-contain p-6">
                         </div>
                     </div>
                 </div>
@@ -315,27 +336,35 @@
                 <div class="relative" data-aos="fade-right">
                     <div class="grid grid-cols-2 gap-4">
                         <div class="space-y-4">
-                            <div
-                                class="rounded-[2.5rem] overflow-hidden aspect-square border border-white/10 shadow-2xl">
-                                <img src="img/estrutura-treino.jpg" alt="Treino em grupo no CT Gustavo Pires"
-                                    class="w-full h-full object-cover photo-bw">
-                            </div>
+                            <!-- 3:4 — proporção original da foto, sem corte -->
                             <div
                                 class="rounded-[2.5rem] overflow-hidden aspect-[3/4] border border-white/10 shadow-2xl">
-                                <img src="img/estrutura-espelho.jpg" alt="Área de treino funcional com espelho e iluminação do CT Gustavo Pires"
-                                    class="w-full h-full object-cover photo-bw">
+                                <img src="img/estrutura-treino.jpg" width="1200" height="1600" loading="lazy"
+                                    decoding="async" alt="Alunos em treino em grupo no CT Gustavo Pires"
+                                    class="w-full h-full object-cover photo">
+                            </div>
+                            <!-- 4:3 — a foto é panorâmica; um slot quadrado cortava o logo da parede -->
+                            <div
+                                class="rounded-[2.5rem] overflow-hidden aspect-[4/3] border border-white/10 shadow-2xl">
+                                <img src="img/estrutura-panoramica.jpg" width="1600" height="900" loading="lazy"
+                                    decoding="async" alt="Vista panorâmica do salão de treino do CT Gustavo Pires"
+                                    class="w-full h-full object-cover photo">
                             </div>
                         </div>
                         <div class="space-y-4 sm:-mt-12">
+                            <!-- 3:4 — proporção original da foto, sem corte -->
                             <div
                                 class="rounded-[2.5rem] overflow-hidden aspect-[3/4] border border-white/10 shadow-2xl">
-                                <img src="img/estrutura-musculacao.jpg" alt="Estação de musculação do CT Gustavo Pires"
-                                    class="w-full h-full object-cover photo-bw">
+                                <img src="img/estrutura-espelho.jpg" width="1200" height="1600" loading="lazy"
+                                    decoding="async"
+                                    alt="Área de treino funcional com espelho e iluminação do CT Gustavo Pires"
+                                    class="w-full h-full object-cover photo">
                             </div>
                             <div
                                 class="rounded-[2.5rem] overflow-hidden aspect-square border border-white/10 shadow-2xl">
-                                <img src="img/estrutura-panoramica.jpg" alt="Vista panorâmica do CT Gustavo Pires"
-                                    class="w-full h-full object-cover photo-bw">
+                                <img src="img/estrutura-musculacao.jpg" width="900" height="1600" loading="lazy"
+                                    decoding="async" alt="Estação de musculação do CT Gustavo Pires"
+                                    class="w-full h-full object-cover photo">
                             </div>
                         </div>
                     </div>
@@ -489,7 +518,7 @@
                     <p class="text-gray-300 mb-6 leading-relaxed">
                         Encontre o melhor CT de Mineiros do Tietê e comece sua transformação hoje mesmo.
                     </p>
-                    <a href="https://maps.app.goo.gl/7zzJteJsx1AAXyyUA" target="_blank"
+                    <a href="https://maps.app.goo.gl/7zzJteJsx1AAXyyUA" target="_blank" rel="noopener"
                         class="block text-center bg-primary text-secondary py-4 rounded-2xl font-black uppercase text-sm hover:scale-105 transition-all shadow-gold">Como
                         Chegar</a>
                 </div>
@@ -503,12 +532,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid md:grid-cols-4 gap-16 mb-20">
                 <div class="col-span-2">
-                    <img src="img/logo.jpeg" alt="Logo CT Gustavo Pires" class="h-20 w-auto mb-10 rounded-xl">
+                    <img src="img/logo.jpeg" width="1170" height="1169" loading="lazy" decoding="async"
+                        alt="Logo CT Gustavo Pires" class="h-20 w-auto mb-10 rounded-xl">
                     <h3 class="text-4xl font-heading font-black mb-8 uppercase leading-tight italic">
                         Seu Resultado <br><span class="text-primary italic">é Minha Missão</span>.
                     </h3>
                     <div class="flex gap-4">
-                        <a href="https://www.instagram.com/ct.gustavopires_/" target="_blank"
+                        <a href="https://www.instagram.com/ct.gustavopires_/" target="_blank" rel="noopener"
                             class="w-14 h-14 glass rounded-2xl flex items-center justify-center hover:bg-primary hover:text-secondary transition-all duration-300 border-primary/20">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -518,7 +548,7 @@
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
                         </a>
-                        <a href="https://wa.me/5514997594297" target="_blank"
+                        <a href="https://wa.me/5514997594297" target="_blank" rel="noopener"
                             class="w-14 h-14 glass rounded-2xl flex items-center justify-center hover:bg-primary hover:text-secondary transition-all duration-300 border-primary/20">
                             <i data-lucide="message-circle" class="w-6 h-6"></i>
                         </a>
@@ -557,17 +587,15 @@
 
             <div
                 class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-gray-500 font-bold uppercase tracking-widest">
-                <p>&copy; 2024 CT GUSTAVO PIRES. Desenvolvido para Performance.</p>
-                <div class="flex gap-8">
-                    <a href="#" class="hover:text-white transition-colors">Privacidade</a>
-                    <a href="#" class="hover:text-white transition-colors">Termos</a>
-                </div>
+                <p>&copy; <span id="current-year">2026</span> CT GUSTAVO PIRES. Desenvolvido para Performance.</p>
+                <p>Mineiros do Tietê - SP</p>
             </div>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5514997594297" target="_blank" class="fixed bottom-8 right-8 z-50 group">
+    <a href="https://wa.me/5514997594297" target="_blank" rel="noopener" aria-label="Falar com Gustavo no WhatsApp"
+        class="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 group">
         <div
             class="absolute inset-0 bg-[#25D366] rounded-full blur-[20px] opacity-40 group-hover:opacity-60 transition-opacity">
         </div>
@@ -581,10 +609,13 @@
     </a>
 
     <!-- Modal Saiba Mais -->
-    <div id="info-modal" class="fixed inset-0 z-[100] flex items-center justify-center px-4 hidden">
+    <div id="info-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+        class="fixed inset-0 z-[100] flex items-center justify-center px-4 py-8 overflow-y-auto hidden">
         <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal()"></div>
-        <div class="relative glass border border-primary/30 rounded-[2rem] p-10 max-w-lg w-full shadow-2xl z-10" data-aos="zoom-in">
-            <button onclick="closeModal()" class="absolute top-5 right-5 text-gray-400 hover:text-white transition-colors">
+        <!-- sem data-aos: o modal nasce oculto e o AOS o deixaria preso em opacity 0 -->
+        <div class="relative glass border border-primary/30 rounded-[2rem] p-8 sm:p-10 max-w-lg w-full shadow-2xl z-10 my-auto">
+            <button onclick="closeModal()" type="button" aria-label="Fechar"
+                class="absolute top-5 right-5 text-gray-400 hover:text-white transition-colors">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
             <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
@@ -592,7 +623,7 @@
             </div>
             <h3 id="modal-title" class="text-2xl font-black uppercase mb-4 text-white"></h3>
             <p id="modal-body" class="text-gray-400 leading-relaxed text-base"></p>
-            <a href="https://wa.me/5514997594297" target="_blank"
+            <a href="https://wa.me/5514997594297" target="_blank" rel="noopener"
                 class="mt-8 block text-center bg-primary text-secondary py-3 rounded-2xl font-black uppercase text-sm hover:scale-105 transition-all shadow-gold">
                 Quero saber mais no WhatsApp
             </a>
@@ -603,10 +634,10 @@
         function openModal(title, body) {
             document.getElementById('modal-title').textContent = title;
             document.getElementById('modal-body').textContent = body;
-            const modal = document.getElementById('info-modal');
-            modal.classList.remove('hidden');
+            document.getElementById('info-modal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
-            lucide.createIcons();
+            // O Lucide vem de CDN; se falhar, o modal ainda precisa abrir.
+            if (window.renderIcons) window.renderIcons();
         }
         function closeModal() {
             document.getElementById('info-modal').classList.add('hidden');
