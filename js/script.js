@@ -1,30 +1,24 @@
 (function () {
     'use strict';
 
-    // Os plugins vem de CDN. Se qualquer um falhar (rede movel instavel,
-    // bloqueador de anuncios, CDN fora do ar), nenhuma chamada abaixo pode
-    // derrubar o restante do script.
+    // Os icones sao SVG inline no HTML: nao dependem de CDN nem de JS.
 
-    // Icones (Lucide)
-    function renderIcons() {
-        if (window.lucide && typeof window.lucide.createIcons === 'function') {
-            window.lucide.createIcons();
-        }
-    }
-    renderIcons();
-    // Disponivel para o modal redesenhar seus icones
-    window.renderIcons = renderIcons;
+    // Animacoes de entrada, com IntersectionObserver nativo.
+    // O CSS deixa [data-aos] em opacity: 0; se algo aqui falhar, a classe
+    // .no-aos devolve o conteudo em vez de deixar a pagina em branco.
+    const alvos = document.querySelectorAll('[data-aos]');
+    if ('IntersectionObserver' in window && alvos.length) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                const delay = parseInt(el.dataset.aosDelay, 10) || 0;
+                setTimeout(() => el.classList.add('aos-animate'), delay);
+                obs.unobserve(el); // anima uma vez so
+            });
+        }, { rootMargin: '0px 0px -10% 0px', threshold: 0.01 });
 
-    // Animacoes de scroll (AOS)
-    // O CSS do AOS deixa os elementos com opacity: 0 ate a biblioteca marca-los.
-    // Sem o AOS a pagina inteira ficaria invisivel, entao liberamos o conteudo.
-    if (window.AOS && typeof window.AOS.init === 'function') {
-        window.AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100,
-            easing: 'ease-out-cubic'
-        });
+        alvos.forEach(el => observer.observe(el));
     } else {
         document.documentElement.classList.add('no-aos');
     }
@@ -49,11 +43,12 @@
         mobileMenu.classList.toggle('hidden', !open);
         mobileMenuButton.setAttribute('aria-expanded', String(open));
         mobileMenuButton.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-        // Alterna o icone entre hamburguer e X
-        const icon = mobileMenuButton.querySelector('[data-lucide], svg');
-        if (icon) {
-            icon.setAttribute('data-lucide', open ? 'x' : 'menu');
-            renderIcons();
+        // Alterna entre os dois icones ja presentes no HTML
+        const abrir = mobileMenuButton.querySelector('[data-icon="open"]');
+        const fechar = mobileMenuButton.querySelector('[data-icon="close"]');
+        if (abrir && fechar) {
+            abrir.classList.toggle('hidden', open);
+            fechar.classList.toggle('hidden', !open);
         }
     }
 

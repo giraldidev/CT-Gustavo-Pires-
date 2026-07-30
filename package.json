@@ -1,0 +1,11 @@
+{
+  "name": "ct-gustavo-pires",
+  "private": true,
+  "description": "Site do CT Gustavo Pires - Mineiros do Tiete",
+  "scripts": {
+    "build:css": "tailwindcss -i src/tailwind.src.css -o css/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

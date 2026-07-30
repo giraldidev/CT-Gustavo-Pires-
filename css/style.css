@@ -28,14 +28,47 @@
     background: rgba(15, 15, 15, 0.95);
 }
 
-/* Failsafe do AOS.
-   O CSS do AOS deixa os elementos com opacity: 0 ate a biblioteca marca-los
-   como animados. Se o CDN falhar ou o JS estiver desativado, a pagina inteira
-   ficaria invisivel. Estas regras devolvem o conteudo nesses cenarios. */
+/* Animacoes de entrada.
+   Substituem a biblioteca AOS (39 KB de CDN, que ainda atrasava o conteudo).
+   Aqui sao ~20 linhas de CSS + IntersectionObserver, sem dependencia externa. */
+[data-aos] {
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    will-change: opacity, transform;
+}
+
+[data-aos="fade-up"] {
+    transform: translateY(24px);
+}
+
+[data-aos="fade-right"] {
+    transform: translateX(-24px);
+}
+
+[data-aos="fade-left"] {
+    transform: translateX(24px);
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: none;
+    will-change: auto;
+}
+
+/* Failsafe: sem JS (ou sem IntersectionObserver) o conteudo aparece normalmente,
+   em vez de ficar presa em opacity: 0 para sempre. */
 .no-aos [data-aos] {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
 
 /* Fotos reais do CT.
